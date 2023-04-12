@@ -12,6 +12,7 @@ const profile = require("./controllers/profile");
 const image = require("./controllers/image");
 
 // Creating the connection
+/*
 const db = knex({
   client: "pg",
   connection: {
@@ -20,6 +21,17 @@ const db = knex({
     user: "postgres",
     password: "dplasencia",
     database: "smart-brain",
+  },
+});
+*/
+const db = knex({
+  client: "pg",
+  connection: {
+    host: process.env.DATABASE_HOST,
+    port: process.env.DATABASE_PORT,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PW,
+    database: process.env.DATABASE_DB,
   },
 });
 
