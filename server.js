@@ -31,9 +31,11 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  db.select("*")
-    .from("users")
-    .then((data) => res.json(data));
+  //db.select("*")
+  // .from("users")
+  //  .then((data) => res.json(data));
+
+  res.json("Hola mundo");
 });
 
 // TO CHECK IF THE USER AND PASSWORD YOU ENTERED ARE CORRECT
