@@ -74,6 +74,6 @@ app.post("/imageurl", (req, res) => {
 });
 
 // it will run after the listen happens
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log("app is running in port tcp 3001");
 });
