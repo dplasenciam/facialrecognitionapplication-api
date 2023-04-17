@@ -5,14 +5,14 @@ const returnClarifaiRequestOptions = (imageUrl) => {
   //////////////////////////////////////////////////////////////////////////////////////////////////
 
   // Your PAT (Personal Access Token) can be found in the portal under Authentification
-  //const PAT = "67df80e557db4d228ed1b894282a57b4";
-  const PAT = "30aa229b22df4a3cb970b6fabc7ba791";
+
+  const PAT = process.env.PAT;
   // Specify the correct user_id/app_id pairings
   // Since you're making inferences outside your app's scope
-  const USER_ID = "g29pyxsulkqc";
-  const APP_ID = "DanielPlasencia-FaceDetection";
+  const USER_ID = process.env.USER_ID;
+  const APP_ID = process.env.APP_ID;
   // Change these to whatever model and image URL you want to use
-  const MODEL_ID = "face-detection";
+  const MODEL_ID = process.env.MODEL_ID;
   //const MODEL_VERSION_ID = "6dc7e46bc9124c5c8824be4822abe105";
   //const IMAGE_URL = this.state.input;
   const IMAGE_URL = imageUrl;
