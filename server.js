@@ -24,6 +24,9 @@ const db = knex({
   },
 });
 */
+
+// conection to db
+
 const db = knex({
   client: "pg",
   connection: {
